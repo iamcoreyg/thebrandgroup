@@ -48,7 +48,7 @@ $(document).ready(function() {
             $.ajax({
                 type:'get',
                 dataType:"jsonp",
-                url:'http://thebrandgroup.la/api/core/get_page/?slug=' + pageName,
+                url:'http://thebrandgroup.la/api/core/get_page/?slug=' + pageName+ '&callback=?',
                 success:function(data){
                     if(data) {
                         console.log(pageName)
