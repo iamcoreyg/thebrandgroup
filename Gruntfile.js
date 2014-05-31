@@ -348,6 +348,20 @@ module.exports = function (grunt) {
                 'imagemin',
                 'svgmin'
             ]
+        },
+        buildcontrol: {
+            options: {
+                dir: 'dist',
+                commit: true,
+                push: true,
+                message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+            },
+            pages: {
+                options: {
+                    remote: 'https://github.com/iamcoreyg/thebrandgroup.git',
+                    branch: 'gh-pages'
+                }
+            }
         }
     });
 
@@ -406,4 +420,6 @@ module.exports = function (grunt) {
         'test',
         'build'
     ]);
+
+    grunt.loadNpmTasks('grunt-build-control');
 };
