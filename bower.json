@@ -1,0 +1,12 @@
+{
+  "name": "brandgroup",
+  "private": true,
+  "dependencies": {
+    "sass-bootstrap": "~3.0.0",
+    "modernizr": "~2.6.2",
+    "jquery": "~1.10.2",
+    "mustache": "~0.8.1",
+    "jquery.cycle2": "https://raw.github.com/malsup/malsup.github.com/master/jquery.cycle2.js"
+  },
+  "devDependencies": {}
+}

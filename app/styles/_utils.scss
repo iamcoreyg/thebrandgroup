@@ -1,0 +1,10 @@
+/*Custom stuff */
+$lightgray: #A3A3A3;
+$pink: #FA0096;
+$neonBlue: #1AE3FF;
+
+@mixin transition {
+  transition: all .3s;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+}

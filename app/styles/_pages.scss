@@ -1,0 +1,205 @@
+#about {
+  width: 50%;
+  min-width: 600px;
+  font-family: Georgia;
+  line-height: 1.5;
+  font-size: 13pt;
+}
+
+#splash {
+  width: 100%;
+  height: 100%;
+  display: table;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background: #fff;
+  text-align: center;
+  font-size: 30pt;
+
+  #scroll-down {
+    -webkit-animation: scroll-down 3s infinite;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    color: #999;
+    padding: 20px;
+    font-size: 9pt;
+  }
+}
+
+#splash-text, .break-text {
+  display: table-cell;
+  vertical-align: middle;
+  font-family: 'EB Garamond', sans-serif;
+  color: #222;
+  font-weight: 800;
+  width: 100%;
+
+  small {
+    color: #818181;
+    font-size: 14pt;
+  }
+}
+
+.break {
+  display: table;
+  height: 75%;
+  min-height: 300px;
+  width: 100%;
+  font-size: 13pt;
+  text-align: right;
+
+  .break-text {
+    padding: 20px;
+  }
+}
+
+#index {
+  background: url(../images/new-york.jpg) fixed no-repeat;
+  background-size: cover;
+}
+
+#about {
+  background: #fff;
+}
+
+#clients {
+  ul {
+    line-height: 2;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    /*
+
+   trying to get text to be centered
+
+   */
+    display: inline-block;
+    background: #f1f1f1;
+    height: 150px;
+    vertical-align: top;
+    width: 150px;
+    margin: 10px;
+    padding: 0 30px;
+    text-align: center;
+    font-weight: bold;
+
+
+  }
+}
+
+#events {
+  ul, li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    display: table;
+    height: 300px;
+
+    .event-info {
+      padding: 30px;
+      background: rgba(0, 0, 0, 0.51);
+      display: table-cell;
+      vertical-align: middle;
+      @include transition();
+
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.21);
+      }
+
+      a {
+        color: #fff;
+        font-weight: bold;
+        font-size: 15pt;
+      }
+
+      p {
+        color: #fff;
+      }
+    }
+
+    small {
+      color: #949494;
+    }
+  }
+
+  .more-link {
+    display: none;
+  }
+}
+
+#event-content {
+  width: 800px;
+}
+
+#paris {
+  background: url(../images/paris.jpg) fixed no-repeat;
+  background-size: cover;
+}
+
+#topshelf-pix {
+  height: 45%;
+  background: #fff url(../images/break2.jpg) fixed no-repeat;
+  background-size: 100%;
+  background-position: center center;
+}
+
+.slideshow-img {
+  width: 200px;
+  height: auto;
+}
+
+#slideshow-wrap {
+
+  position: fixed;
+  display: table;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 9999999;
+  background: rgba(255, 255, 255, 0.77);
+}
+
+.hide-slideshow {
+  @include transition;
+  z-index: -999999 !important;
+  opacity: 0;
+  -webkit-transform: scale(.001, 0.001);
+  -moz-transform: scale(.001, 0.001);
+  transform: scale(.001, 0.001);
+
+  img {
+    display: none;
+  }
+}
+
+
+#inner-slideshow {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.close-slideshow-btn {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  color: red;
+  font-size: 30pt;
+  opacity: .6;
+  &:hover {
+    color: red;
+    opacity: 1;
+  }
+}
