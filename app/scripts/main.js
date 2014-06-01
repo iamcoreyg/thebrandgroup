@@ -39,26 +39,11 @@ $(document).ready(function() {
     //getFunctions.js
     var getPageContent = function(pages) {
         $.each(pages, function(i, pageName) {
-//            $.getJSON('http://thebrandgroup.la/api/core/get_page/?slug=' + pageName, function(data) {
-//                var template = $('#' + pageName + 'Tpl').html()
-//                var html = Mustache.to_html(template, data)
-//                $('#' + pageName + '-content').html(html)
-//            })
-
-            $.ajax({
-                type:'get',
-                dataType:"jsonp",
-                url:'http://thebrandgroup.la/api/core/get_page/?slug=' + pageName+ '&callback=?',
-                success:function(data){
-                    if(data) {
-                        console.log(pageName)
-                        var template = $('#' + pageName + 'Tpl').html()
-                        var html = Mustache.to_html(template, data)
-                        $('#' + pageName + '-content').html(html)
-                    }
-                }
-            });
-
+            $.getJSON('http://thebrandgroup.la/api/core/get_page/?slug=' + pageName, function(data) {
+                var template = $('#' + pageName + 'Tpl').html()
+                var html = Mustache.to_html(template, data)
+                $('#' + pageName + '-content').html(html)
+            })
         })
     }
 
@@ -93,22 +78,21 @@ $(document).ready(function() {
 
                                        slideWrapImg.attr('src', $this.attr('src'))
                                        slideWrap.removeClass('hide-slideshow')
-                                       $(".main-wrap, nav").addClass('blur')                                    })
+                                       $(".main-wrap, nav").addClass('blur')
+                                   })
                                 });
         })
     }
 
 
     //main.js
-    if (pageIs('index')) {
+
+    if (pageIs('event')) {
+        var eventName = $.getUrlVar('event');
+        loadEventPageContent(eventName, 'event')
+    } else {
         getPageContent(['about', 'clients'])
         getCategoryContent('events')
-    } else {
-        if (pageIs('event')) {
-            var eventName = $.getUrlVar('event');
-//            alert(eventName)
-            loadEventPageContent(eventName, 'event')
-        }
     }
 
 })
