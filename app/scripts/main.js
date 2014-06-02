@@ -1,5 +1,17 @@
 $(document).ready(function() {
-    //detect is load is too long
+
+    //page navigation
+    var scrollToPage = function(page) {
+        $("html, body").animate({ scrollTop: $('#'+page).offset().top }, 1500);
+    }
+
+    $("#main-nav a").on('click', function(){
+        var page = $(this).data('page')
+        scrollToPage(page)
+        return false
+    })
+
+    //detect if load is too long
     setTimeout(function(){
         $("#floatingCirclesG").each(function() {
             $(this).addClass("error").html('An error has occurred. Please refresh the page or wait. It is up to you really.')
@@ -27,9 +39,7 @@ $(document).ready(function() {
     //isPage.js
     var pageIs = function (pageName) {
         var currentPage = window.location.pathname
-        if(currentPage.length == 1) {
-            return true
-        } else if (currentPage.match(pageName)) {
+        if (currentPage.match(pageName)) {
             return true
         } else {
             return false
@@ -94,5 +104,4 @@ $(document).ready(function() {
         getPageContent(['about', 'clients'])
         getCategoryContent('events')
     }
-
 })

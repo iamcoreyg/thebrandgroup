@@ -10,7 +10,7 @@
     <meta name="description" content="The Brand Group is a full service firm that tailor makes the most innovating and strongest way of building a Star, Venue or Event. Through effective social media work, proper brand infusion and brand alignment TBG is able to build a brand that is attractive to the commercial world for endorsements and sponsorships. Being a powerhouse company who represents Sports, Music, Clothing & Media, our reach is further, faster and one of a kind. With years of experience and countless successful endeavors, TBG has always had their hands on whats new in the culture and what can enhance the culture first.
 
 ">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
@@ -32,29 +32,30 @@
 
 <div id="splash">
     <div id="splash-text">
-        THE. BRAND. GROUP. <br />
+        THE BRAND GROUP <br />
         <small>Los Angeles. New York. London. 2014</small>
     </div>
-    <div id="scroll-down">Scroll Down</div>
+    <div id="scroll-down">
+        Scroll Down <br />
+        <i class="fa fa-chevron-down"></i>
+    </div>
 </div>
 
         <nav id="main-nav">
             <ul>
-                <li id="logo" class="wow fadeInDown"><img src="images/logo.png" /></li>
-                <li class="wow fadeInLeft" data-wow-delay=".1s" data-wow-duration=".5s"><a href="./#home" data-page="home">Home</a></li>
+                <li id="logo" class="wow fadeInDown"><a href="./#home" data-page="home"><img src="images/logo.png" /></a></li>
                 <li class="wow fadeInLeft" data-wow-delay=".3s" data-wow-duration=".5s"><a href="./#about" data-page="about">About</a></li>
-                <li class="wow fadeInLeft" data-wow-delay=".5s" data-wow-duration=".5s"><a href="#">Lifestyle</a></li>
                 <li class="wow fadeInLeft" data-wow-delay=".7s" data-wow-duration=".5s"><a href="./#events" data-page="events">Events</a></li>
                 <li class="wow fadeInLeft" data-wow-delay=".8s" data-wow-duration=".5s"><a href="./#clients" data-page="clients">Clients</a></li>
-                <li class="wow fadeInLeft" data-wow-delay=".9s" data-wow-duration=".5s"><a href="./#media" data-page="media">Media</a></li>
+                <li class="wow fadeInLeft" data-wow-delay=".5s" data-wow-duration=".5s"><a href="#">Lifestyle</a></li>
                 <li id="copyright">
-                    The Brand Group &copy 2014 <br />
-                    <span id="credit">Crafted by Corey G</span></li>
+                    The Brand Group &copy 2014<br />
+                    <a href="http://iamcoreyg.com" id="credit">Crafted by Corey G</a></li>
             </ul>
         </nav>
 
 <!---------------------- make space for splash page ---------------------->
-        <div class="main-wrap">
+        <div class="main-wrap" id="space-wrap">
         </div>
 
         <!---------------------- index page ---------------------->
@@ -99,7 +100,7 @@
 
         <div class="break" id="paris" data-stellar-background-ratio="0.5">
             <div class="break-text">
-                Connecting The Hottest Events, The Strongest Brands <br />& The Most Exclusive Clients
+                Connecting The <strong>Hottest</strong> Events, The <strong>Strongest</strong> Brands <br />& The Most <strong>Exclusive</strong> Clients
             </div>
         </div>
 
@@ -108,14 +109,17 @@
                 <h1>
                    {{category.title}}
                 </h1>
-                {{#posts}}
-                    <li class="col-md-6" data-stellar-background-ratio="0.5" style="background: url({{thumbnail_images.full.url}}); background-size: cover;">
-                        <div class="event-info">
-                        <a href="event.html?event={{slug}}"> {{title}}</a> <br />
-                            <small>{{{content}}}</small>
-                        </div>
-                    </li>
-                {{/posts}}
+                <ul>
+                    {{#posts}}
+                        <li class="col-md-6" data-stellar-background-ratio="0.5" style="background: url({{thumbnail_images.full.url}}); background-size: cover;">
+                            <div class="event-info">
+                            <a href="event.html?event={{slug}}"> {{title}}</a> <br />
+                                <small>{{{content}}}</small>
+                            </div>
+                        </li>
+                    {{/posts}}
+                    <div class="clearfix"></div>
+                </ul>
             </script>
             <div id="events-content">
                 <div id="floatingCirclesG">
@@ -207,6 +211,7 @@
         <script src="bower_components/sass-bootstrap/js/scrollspy.js"></script>
         <script src="bower_components/sass-bootstrap/js/collapse.js"></script>
         <script src="bower_components/sass-bootstrap/js/tab.js"></script>
+        <script src="bower_components/imagesloaded/imagesloaded.pkgd.min.js"></script>
         <script src="bower_components/mustache/mustache.js"></script>
         <script src="bower_components/jquery.stellar/src/jquery.stellar.js"></script>
         <script src="scripts/wow.js"></script>
