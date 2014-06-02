@@ -103,5 +103,7 @@ $(document).ready(function() {
     } else {
         getPageContent(['about', 'clients'])
         getCategoryContent('events')
+        $.stellar();
+        new WOW().init();
     }
 })
