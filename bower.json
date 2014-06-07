@@ -9,6 +9,7 @@
     "jquery.cycle2": "https://raw.github.com/malsup/malsup.github.com/master/jquery.cycle2.js"
   },
   "devDependencies": {
-    "imagesloaded": "~3.1.5"
+    "imagesloaded": "~3.1.5",
+    "masonry": "~3.1.5"
   }
 }

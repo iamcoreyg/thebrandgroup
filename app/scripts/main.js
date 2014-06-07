@@ -73,11 +73,11 @@ $(document).ready(function() {
             $('#event-content').html(html)
             $('#event-content').find('p').appendTo( '#event-info' )
 
-            $('#event-content').find("img")
+            $('#event-content').find("img").appendTo( '#event-images' )
                                .addClass('slideshow-img')
                                .wrap('<div class="item"></div>')
                                .imagesLoaded( function() {
-                                   $('#event-images').masonry({
+                                       $('#event-images').masonry({
                                        itemSelector: '.item'
                                    });
 

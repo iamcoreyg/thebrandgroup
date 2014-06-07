@@ -1,6 +1,7 @@
 .contact-btn {
   display: block;
-  width: 320px;
+  max-width: 320px;
+  width: 100%;
   padding: 10px;
   text-align: center;
   border: 1px solid #CE4545;
@@ -110,25 +111,19 @@
     vertical-align: top;
     width: 175px;
     margin: 10px;
-    padding: 0 30px;
     text-align: center;
     font-weight: bold;
     overflow: hidden;
+    @include transition();
 
-    a::before {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: 0 15px 26.0px 15px;
-      border-color: transparent transparent #ffffff transparent;
+    &:hover {
+      background: #CE4545;
     }
 
     a {
       display: table-cell;
       vertical-align: middle;
+      padding: 0 30px;
       color: #636363;
       font-weight: lighter;
       letter-spacing: 2px;
@@ -206,6 +201,10 @@
 
 #event-content {
   width: 800px;
+}
+
+#event-images {
+  position: relative;
 }
 
 #paris {

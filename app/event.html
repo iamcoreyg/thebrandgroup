@@ -6,9 +6,9 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>TThe Brand Group</title>
+    <title>The Brand Group</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
@@ -44,16 +44,14 @@
 
 <nav id="main-nav">
     <ul>
-        <li id="logo" class="wow fadeInUp"><img src="images/logo.png" /></li>
-        <li><a href="./#home" data-page="home">Home</a></li>
+        <li id="logo"><a href="./#home" data-page="home"><img src="images/logo.png" /></a></li>
         <li><a href="./#about" data-page="about">About</a></li>
-        <li><a href="#">Lifestyle</a></li>
         <li><a href="./#events" data-page="events">Events</a></li>
         <li><a href="./#clients" data-page="clients">Clients</a></li>
-        <li><a href="./#media" data-page="media">Media</a></li>
+        <li><a href="#">Lifestyle</a></li>
         <li id="copyright">
-            The Brand Group &copy 2014 <br />
-            <span id="credit">Crafted by Corey G</span></li>
+            The Brand Group &copy 2014<br />
+            <a href="http://iamcoreyg.com" id="credit">Site Crafted by Corey G</a></li>
     </ul>
 </nav>
 
@@ -96,13 +94,10 @@
 
 </div>
 
-
-
-
-
-
-
-<!---------------------- events page ---------------------->
+<footer id="mobile-footer">
+    &copy 2014 The Brand Group, LLC | All Rights Reserved <br />
+    <a href="http://iamcoreyg.com" target="_blank">Site Crafted by Corey G</a>
+</footer>
 
 
 <!-- build:js scripts/vendor.js -->
@@ -136,7 +131,7 @@
 <script src="bower_components/sass-bootstrap/js/tab.js"></script>
 <script src="bower_components/mustache/mustache.js"></script>
 <script src="bower_components/imagesloaded/imagesloaded.pkgd.min.js"></script>
-<script src="scripts/masonry.pkgd.min.js"></script>
+<script src="bower_components/masonry/dist/masonry.pkgd.min.js"></script>
 <!-- endbuild -->
 
 <!-- build:js({app,.tmp}) scripts/main.js -->
