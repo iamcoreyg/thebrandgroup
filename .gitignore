@@ -13,3 +13,5 @@ test/bower_components
 *.xml
 
 *.xml
+
+.idea/workspace.xml
