@@ -3,5 +3,7 @@ $(window).load(function(){
         $('#slideshow-wrap').addClass('hide-slideshow')
         $('.main-wrap, nav').removeClass('blur')
         $('#slideshow-wrap img').attr('src', '#')
+
+            return false
     })
 })
