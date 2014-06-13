@@ -71,26 +71,19 @@ $(document).ready(function() {
             var template = $('#eventTpl').html()
             var html = Mustache.to_html(template, data)
             $('#event-content').html(html)
-            $('#event-content').find('p').appendTo( '#event-info' )
 
-            $('#event-content').find("img").appendTo( '#event-images' )
-                               .addClass('slideshow-img')
-                               .wrap('<div class="item"></div>')
-                               .imagesLoaded( function() {
-                                       $('#event-images').masonry({
-                                       itemSelector: '.item'
-                                   });
+            $('#event-images a').on('click', function() {
+                var $this = $(this)
+                var slideWrap = $('#slideshow-wrap'),
+                    slideWrapImg = slideWrap.find('img')
 
-                                   $('.item img').on('click', function() {
-                                       var $this = $(this)
-                                       var slideWrap = $('#slideshow-wrap'),
-                                       slideWrapImg = slideWrap.find('img')
+                slideWrapImg.attr('src', $this.attr('href'))
+                slideWrap.removeClass('hide-slideshow')
+                $(".main-wrap, nav").addClass('blur')
 
-                                       slideWrapImg.attr('src', $this.attr('src'))
-                                       slideWrap.removeClass('hide-slideshow')
-                                       $(".main-wrap, nav").addClass('blur')
-                                   })
-                                });
+                return false
+            })
+
         })
     }
 

@@ -35,18 +35,20 @@
   top: 0;
   left: 0;
   z-index: 999;
-  background: #fff;
+  background: #111;
   text-align: center;
   font-size: 30pt;
 
   #scroll-down {
     -webkit-animation: scroll-down 3s infinite;
+    -moz-animation: scroll-down 3s infinite;
+    animation: scroll-down 3s infinite;
     position: absolute;
     bottom: 0;
     width: 100%;
     left: 0;
     text-align: center;
-    color: #999;
+    color: #fff;
     padding: 20px;
     font-size: 9pt;
   }
@@ -56,7 +58,7 @@
   display: table-cell;
   vertical-align: middle;
   font-family: 'EB Garamond', sans-serif;
-  color: #222;
+  color: #fff;
   font-weight: 800;
   width: 100%;
   line-height: .7;
@@ -92,8 +94,6 @@
 #about {
   background: #fff;
 }
-
-
 
 #clients {
   ul {
@@ -205,6 +205,12 @@
 
 #event-images {
   position: relative;
+
+  img {
+    margin-bottom: 5px;
+    display: inline-block;
+    vertical-align: middle;
+  }
 }
 
 #paris {
@@ -267,6 +273,13 @@
   display: table-cell;
   vertical-align: middle;
   text-align: center;
+  height: 100%;
+
+  img {
+    min-height: 300px;
+    height: 65%;
+    max-height: 900px
+  }
 }
 
 .close-slideshow-btn {
